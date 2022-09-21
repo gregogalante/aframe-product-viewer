@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Model Viewer AR - VR</title>
+    <meta name="description" content="Model Viewer (VR / AR) • A-Frame">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script>
+    <script src="./scripts/hide-on-enter-ar.js"></script>
+    <script src="./scripts/model-viewer.js"></script>
+    <script src="./scripts/ar-shadows.js"></script>
+    <script src="./scripts/ar-hit-test.js"></script>
+    <script src="./scripts/background-gradient.js"></script>
+  </head>
+  <body>
+    <a-scene
+      model-viewer="gltfModelSeduta: #sedute-1; gltfModelBase: #basi-1"
+    >
+      <a-assets>
+        <a-asset-item id="sedute-1" src="./sedute/MP_AKILA_UV.gltf"></a-asset-item>
+        <a-asset-item id="basi-1" src="./basi/MP_BASE_1_UV.gltf"></a-asset-item>
+        <a-asset-item id="basi-2" src="./basi/MP_BASE_2_UV.gltf"></a-asset-item>
+      </a-assets>
+    </a-scene>
+
+    <div style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: rgba(0,0,0,0.5); padding: 15px; text-align: center;">
+      <div id="switch-texture-base">
+        <p style="color: white;">Texture base</p>
+        <button data-texture="MAGIC_MG04_2048">MAGIC_MG04_2048</button>
+        <button data-texture="MAGIC_MG07_2048">MAGIC_MG07_2048</button>
+        <button data-texture="MICROSUEDE_9_2048">MICROSUEDE_9_2048</button>
+        <button data-texture="MICROSUEDE_89_2048">MICROSUEDE_89_2048</button>
+      </div>
+      <div id="switch-texture-seduta">
+        <p style="color: white;">Texture seduta</p>
+        <button data-texture="MAGIC_MG04_2048">MAGIC_MG04_2048</button>
+        <button data-texture="MAGIC_MG07_2048">MAGIC_MG07_2048</button>
+        <button data-texture="MICROSUEDE_9_2048">MICROSUEDE_9_2048</button>
+        <button data-texture="MICROSUEDE_89_2048">MICROSUEDE_89_2048</button>
+      </div>
+    </div>
+  </body>
+</html>
